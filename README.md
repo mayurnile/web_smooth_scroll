@@ -12,13 +12,15 @@ While I was developing my portfolio website using Flutter I faced the issue of j
 
 ## Scroll without plugin
 
-![](./assets/Before_Smooth_Scroll.gif)
+<!-- ![](./assets/Before_Smooth_Scroll.gif)-->
+![](https://github.com/mayurnile/web_smooth_scroll/raw/main/assets/Before_Smooth_Scroll.gif)
 
 <br>
 
 ## Scroll with plugin
 
-![](./assets/After_Smooth_Scroll.gif)
+<!-- ![](./assets/After_Smooth_Scroll.gif) -->
+![](https://github.com/mayurnile/web_smooth_scroll/raw/main/assets/After_Smooth_Scroll.gif)
 
 <br>
 

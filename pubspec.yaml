@@ -1,6 +1,6 @@
 name: web_smooth_scroll
 description: A package to help you provide a smoother and aesthetic scroll feeling. The motivation behind this package is, while using the official Flutter SDK the scrolling experience on web is very jerky and feels laggy to overcome it and provide more quality scrolling this package is developed.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/mayurnile/web_smooth_scroll
 
 environment:
