@@ -6,7 +6,7 @@ A package to help you provide a smoother and aesthetic scroll feeling. The motiv
 
 ## Motivation
 
-On pub.dev there's already a package https://pub.dev/packages/smooth_scroll_web, but it has got some issues and currently not being maintained by the author. It has issues while scrolling and also when using with scrollbars the scroll behaviour is different. Also when user uses a trackpad to scroll it'll scroll to the bottom of the screen and makes the website completely usable. Also that package doesn't supports null safety which is supported in this package. I've developed this package to overcome all this issues. I would like to thank Dezső Csete, for this motivation and providing a base to work on.
+While I was developing my portfolio website using Flutter I faced the issue of jerky scrolling so for a research in solving it I came across this package https://pub.dev/packages/smooth_scroll_web, but it has got some issues and currently not being maintained by the author. It has issues while scrolling and also when using with scrollbars the scroll behaviour is different. Also when user uses a trackpad to scroll it'll scroll to the bottom of the screen and makes the website completely unusable. Also that package doesn't supports null safety which is supported in this package. I've developed this package to overcome all this issues. I would like to thank Dezső Csete, for this motivation and providing a base to work on.
 
 <br>
 
