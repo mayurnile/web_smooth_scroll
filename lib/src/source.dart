@@ -55,9 +55,11 @@ class _WebSmoothScrollState extends State<WebSmoothScroll> {
   void didUpdateWidget(covariant WebSmoothScroll oldWidget) {
     // In case if window is resized the widget gets initialized again without listener
     // adding it back again to resolve unwanted issues
-    if (widget.controller.hasListeners == false) {
-      widget.controller.addListener(scrollListener);
-    }
+    widget.controller.removeListener(scrollListener);
+    widget.controller.addListener(scrollListener);
+    // if (widget.controller.hasListeners == false) {
+    //   widget.controller.addListener(scrollListener);
+    // }
     super.didUpdateWidget(oldWidget);
   }
 

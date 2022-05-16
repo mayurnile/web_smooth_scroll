@@ -9,3 +9,7 @@
 ## 0.0.3
 
 * Updated pubspec.yaml
+
+## 1.0.0
+
+* Stable release
