@@ -41,6 +41,7 @@ class WebSmoothScroll extends StatefulWidget {
 class _WebSmoothScrollState extends State<WebSmoothScroll> {
   // data variables
   double _scroll = 0;
+  double _oldScrollState = 0;
 
   @override
   void initState() {
@@ -57,9 +58,7 @@ class _WebSmoothScrollState extends State<WebSmoothScroll> {
     // adding it back again to resolve unwanted issues
     widget.controller.removeListener(scrollListener);
     widget.controller.addListener(scrollListener);
-    // if (widget.controller.hasListeners == false) {
-    //   widget.controller.addListener(scrollListener);
-    // }
+
     super.didUpdateWidget(oldWidget);
   }
 
@@ -74,7 +73,10 @@ class _WebSmoothScrollState extends State<WebSmoothScroll> {
   /// Member Functions
   ///
   ///
-  void scrollListener() => _scroll = widget.controller.offset;
+  void scrollListener() {
+    _oldScrollState = _scroll;
+    _scroll = widget.controller.offset;
+  }
 
   void onPointerSignal(PointerSignalEvent event) {
     // Initializing default animation duration length in MS
@@ -107,12 +109,27 @@ class _WebSmoothScrollState extends State<WebSmoothScroll> {
         millis = widget.animationDuration ~/ 4;
       }
 
+      // Getting the scroll data
+      final double scrollDelta = _scroll - _oldScrollState;
+
       // Animating to the calculated scroll position
-      widget.controller.animateTo(
-        _scroll,
-        duration: Duration(milliseconds: millis),
-        curve: widget.curve,
-      );
+      if (scrollDelta < 150 && scrollDelta > -150) {
+        //If scroll through touchpad/trackpad of a laptop.
+        // widget.controller.jumpTo(_scroll);
+        widget.controller.animateTo(
+          _scroll,
+          duration: const Duration(milliseconds: 400),
+          curve: widget.curve,
+        );
+      } else {
+        //If scroll through mouse wheel.
+        // Animating to the calculated scroll position
+        widget.controller.animateTo(
+          _scroll,
+          duration: Duration(milliseconds: millis),
+          curve: widget.curve,
+        );
+      }
     }
   }
 }

@@ -13,3 +13,6 @@
 ## 1.0.0
 
 * Stable release
+
+## 1.1.0
+* Fixed scrolling issues on touchpad

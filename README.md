@@ -97,8 +97,8 @@ import 'package:web_smooth_scroll/web_smooth_scroll.dart';
 ```dart
     WebSmoothScroll(
         controller: _scrollController,
-        scrollOffset: 100, // additional offset to users scroll input
-        animationDuration: 600, // duration of animation of scroll in milliseconds
+        scrollOffset: 60, // additional offset to users scroll input
+        animationDuration: 500, // duration of animation of scroll in milliseconds
         curve: Curves.easeInOutCirc, // curve of the animation
         child: SingleChildScrollView(
           physics: const NeverScrollableScrollPhysics(),
