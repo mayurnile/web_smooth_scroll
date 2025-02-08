@@ -16,3 +16,8 @@
 
 ## 1.1.0
 * Fixed scrolling issues on touchpad
+
+## 2.0.0
+* Fixed scrolling issues on trackpad
+* Updated for more configurability
+* Updates license

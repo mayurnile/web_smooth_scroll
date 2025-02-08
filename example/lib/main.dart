@@ -48,9 +48,6 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: WebSmoothScroll(
         controller: _scrollController,
-        scrollOffset: 100,
-        animationDuration: 600,
-        curve: Curves.easeInOutCirc,
         child: SingleChildScrollView(
           physics: const NeverScrollableScrollPhysics(),
           controller: _scrollController,
@@ -68,7 +65,8 @@ class _MyHomePageState extends State<MyHomePage> {
           50,
           (index) => Container(
             height: 100,
-            margin: const EdgeInsets.symmetric(vertical: 22.0, horizontal: 120.0),
+            margin:
+                const EdgeInsets.symmetric(vertical: 22.0, horizontal: 120.0),
             color: Colors.red,
           ),
         ),
